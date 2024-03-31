@@ -1,0 +1,343 @@
+/*TESTING!!!!!!!!!!!!*/
+/*BASE*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+    --site-padding: 0.5em 10em 0.5em 10em;
+    --pink-colour:#EC9FA7;
+    --pearl-colour:#F5F4EF;
+    --black-colour:#1D1D1D;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display SC", serif;
+}
+
+body p {
+    line-height: 1.6em;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Link colour when not hovering*/
+button a:link {
+    color: rgb(32, 32, 32);
+}
+
+/* Link colour of a visited link*/
+button a:visited {
+    color: grey;
+}
+
+/*Link colour when hovering*/
+button a:hover {
+    color: rgb(104, 104, 104);
+}
+
+/*Link colour when clicked*/
+button a:active {
+    color: darkblue;
+}
+
+
+/*NAVIGATION*/
+nav {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    display: flex;
+    max-height: 3.8em;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--site-padding);
+    background-color: var(--yellow-colour);
+    list-style: none;
+}
+
+.nav-menu {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ol a {
+    text-decoration: none;
+}
+
+nav button {
+    padding: 10px;
+    margin: 0;
+    border: none;
+    color: black;
+    background-color: transparent;
+}
+
+nav img {
+    height: 3em;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+/*HERO*/
+header {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4em;
+    margin-right: 8em;
+}
+
+header img {
+    height: 36em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-text{
+    padding-top: 34%;
+    width: 100%;
+
+}
+
+/*MAIN*/
+main {
+    padding: var(--site-padding);
+}
+
+#details {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 2em;
+    padding: 1.6em 0em 6em 0;
+    height: 27em;
+}
+
+#details img {
+    height: 30em;
+}
+
+#details p {
+    overflow: scroll;
+    text-overflow: clip;
+    min-height: 20em;
+}
+
+#place-for-content {
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 4em;
+    padding: 1.6em 0em 6em 0;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 1.2em;
+}
+
+main h2 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+main h4 {
+    font-size: 1.8em;
+    margin: 0.2em 0em 0.4em 0em;
+}
+
+main h5 {
+    background-color: rgb(208, 208, 208);
+    padding: 0.2em;
+    border-radius: 0.5em;
+}
+
+main p {
+    overflow: scroll;
+    text-overflow: scroll;
+    height: 12.8em;
+}
+
+main img { 
+    height: 25em;
+    width: auto;
+    align-items: center;
+}
+
+main a, button {
+    min-height: 1em;
+    width: 6em;
+    padding: 0.8em;
+    color: white;
+    background-color: var(--yellow-colour);
+    border: none;
+    text-decoration: none;
+}
+
+
+
+/*FOOTER*/
+footer {
+    height: 3em;
+    text-align: center;
+    padding: var(--site-padding);
+    background-color: var(--yellow-colour);
+}
+
+
+
+
+/*RESPONSIVE*/
+/* Media query for IPad Pros - less tha 1024*/
+@media screen and (max-width: 64em) {
+
+    :root {
+        --site-padding: 0.5em 5em 0.5em 5em;
+    }
+    main {
+        display: block;
+    }
+
+    header {
+        gap: 3em;
+        margin-right: 6em;
+    }
+
+}
+
+/* Media query for IPad Minis - less tha 768*/
+@media screen and (max-width: 48em) {
+    :root {
+        --site-padding: 0.45em 2.4em 0.45em 2.4em;
+    }
+
+    h1, h2, h3, h4, h5 {
+        padding: 0.2em;
+        margin: 0;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 3rem;
+        flex-direction: column;
+        background-color: #fff;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    header {
+        gap: 2em;
+        margin-right: 4em;
+    }
+    
+    main {
+        display: block;
+        padding: var(--site-padding);
+    }
+
+    main img {
+        max-height: 17em;
+    }
+
+    main p {
+        height: 8em;
+    }
+
+    #place-for-content {
+        grid-template-columns: 0.3fr 1.7fr;
+        gap: 3em;
+    }
+
+    #details {
+        display: inline-block;
+        gap: 2em;
+    }
+    
+    #details img {
+        min-height: 26em;
+    }
+}
+
+/* Media query for Phones - less tha 480px*/
+@media screen and (max-width: 30em) {
+    /*Links are blue?????? change that maybe*/
+    :root {
+        --site-padding: 0.4em 1em 0.4em 1em;
+    }
+
+    h1 {
+        font-size: 1.875em;
+    }
+    
+    h2 {
+        font-size: 1.625em;
+    }
+    
+    h3 {
+        font-size: 1.25em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+
+    nav {
+        padding: 0.375em;
+    }
+
+    header {
+        display: block;
+        min-height: 22em;
+        margin: 0;
+    }
+  
+    header img {
+        height: 18em;
+    }
+
+    .header-text {
+        padding: var(--site-padding);
+        width: auto;
+    }
+
+    main {
+        display: block;
+        padding: var(--site-padding);
+    }
+
+    main img {
+        min-height: 16em;
+        width: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    main p {
+        height: 18em;
+    }
+
+    #place-for-content {
+        grid-template-columns: 1fr;
+    }
+
+    #place-for-content div {
+        border-bottom: solid 0.8em #dbba3f;
+    }
+}
