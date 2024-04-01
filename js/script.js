@@ -28,7 +28,7 @@ var client = contentful.createClient({
     accessToken: 'z05I6zWTRyoI5LJIlwwrhUEVSBHgEKoWpeljnS75yrc',
   });
 
-var placeForContent = document.getElementById('place-for-content');
+var placeForContent = document.getElementById('daily-picks');
 
 
   // gets all the entries as a json
@@ -40,39 +40,39 @@ var placeForContent = document.getElementById('place-for-content');
         console.log("entry:");
         console.log(entry);
       // if statement checks that this field exists  
-      var div = document.createElement ('div');
+      var daily = document.createElement ('daily');
 
-        if (entry.fields.productName) {
+          if (entry.fields.productName) {
+          // if (entry.fields.productName) {
 
             var productMainImage = document.createElement('img');
             productMainImage.src = entry.fields.productMainImage.fields.file.url;
-            div.appendChild(productMainImage);
+            daily.appendChild(productMainImage);
 
-            var productName = document.createElement('h2');
+            var productName = document.createElement('h4');
             productName.innerHTML = entry.fields.productName;
-            div.appendChild(productName);
+            daily.appendChild(productName);
 
-            var productBasicInfo = document.createElement('h5');
+            var productBasicInfo = document.createElement('p');
             productBasicInfo.innerHTML = entry.fields.productBasicInfo;
-            div.appendChild(productBasicInfo);
+            daily.appendChild(productBasicInfo);
 
-            var productPrice = document.createElement('h4');
+            var productPrice = document.createElement('h6');
             productPrice.innerHTML = entry.fields.productPrice;
-            div.appendChild(productPrice);
+            daily.appendChild(productPrice);
 
             // var productCare = document.createElement('p');
             // productCare.innerHTML = entry.fields.productCare;
-            // textDiv.appendChild(productCare);
+            // daily.appendChild(productCare);
 
             // var productDetails = document.createElement('p');
             // productDetails.innerHTML = entry.fields.productDetails;
-            // textDiv.appendChild(productDetails);
+            // daily.appendChild(productDetails);
 
-            var linkToProduct = document.createElement('a');
-            linkToProduct.innerHTML = entry.fields.button;
-            linkToProduct.href = 'product.html?id=' + entry.sys.id;
-            linkToProduct.innerHTML = ('SEE MORE');
-            div.appendChild(linkToProduct);
+            // var linkToProduct = document.createElement('a');
+            // linkToProduct.innerHTML = entry.fields.button;
+            // linkToProduct.href = 'product.html?id=' + entry.sys.id;
+            // daily.appendChild(linkToProduct);
 
             // var link = document.createElement('button')
             // link.innerHTML = "link to " + entry.fields.name;
@@ -83,6 +83,6 @@ var placeForContent = document.getElementById('place-for-content');
             console.log(entry.fields.productName);
         }  
 
-        placeForContent.appendChild(div);
+        placeForContent.appendChild(daily);
     });
   });
