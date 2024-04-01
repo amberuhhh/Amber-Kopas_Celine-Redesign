@@ -50,13 +50,8 @@ nav {
     top: 0;
     position: sticky;
     z-index: 999;
-    display: flex;
-    max-height: 3.8em;
-    justify-content: space-between;
-    align-items: center;
     padding: var(--site-padding);
-    background-color: var(--yellow-colour);
-    list-style: none;
+    background-color: var(--pearl-colour);
 }
 
 .nav-menu {
@@ -64,8 +59,22 @@ nav {
     text-decoration: none;
 }
 
+.nav-top {
+    max-height: 3.8em;
+    justify-content: space-between;
+    display: flex;
+    top: 0;
+    align-items: center;
+    border-bottom: var(--black-colour) solid 0.1em;
+}
+
+.nav-bottom {
+    justify-content: space-between;
+}
+
 nav ol a {
     text-decoration: none;
+    list-style: none;
 }
 
 nav button {
@@ -99,10 +108,8 @@ header img {
     object-fit: cover;
 }
 
-.header-text{
-    padding-top: 34%;
-    width: 100%;
-
+header h1 {
+    text-align: center;
 }
 
 /*MAIN*/

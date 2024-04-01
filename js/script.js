@@ -25,7 +25,7 @@ console.log("Hello World!");
 
 var client = contentful.createClient({
     space: 'jhroq6kjrsy4',
-    accessToken: 'zV8UhcSE-aekfCyefr5xPGasK30EwPOOTWfm6RBxnt4',
+    accessToken: 'z05I6zWTRyoI5LJIlwwrhUEVSBHgEKoWpeljnS75yrc',
   });
 
 var placeForContent = document.getElementById('place-for-content');
