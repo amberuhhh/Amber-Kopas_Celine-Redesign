@@ -40,39 +40,40 @@ var placeForContent = document.getElementById('place-for-content');
         console.log("entry:");
         console.log(entry);
       // if statement checks that this field exists  
-      var div = document.createElement ('div');
+      var imageDiv = document.createElement ('aside');
+      var textDiv = document.createElement ('div');
 
         if (entry.fields.productName) {
 
             var productMainImage = document.createElement('img');
             productMainImage.src = entry.fields.productMainImage.fields.file.url;
-            div.appendChild(productMainImage);
-
+            imageDiv.appendChild(productMainImage);
+            
             var productName = document.createElement('h2');
             productName.innerHTML = entry.fields.productName;
-            div.appendChild(productName);
+            textDiv.appendChild(productName);
 
             var productBasicInfo = document.createElement('h5');
             productBasicInfo.innerHTML = entry.fields.productBasicInfo;
-            div.appendChild(productBasicInfo);
+            textDiv.appendChild(productBasicInfo);
 
             var productPrice = document.createElement('h4');
             productPrice.innerHTML = entry.fields.productPrice;
-            div.appendChild(productPrice);
+            textDiv.appendChild(productPrice);
 
-            // var productCare = document.createElement('p');
-            // productCare.innerHTML = entry.fields.productCare;
-            // textDiv.appendChild(productCare);
+            var productCare = document.createElement('p');
+            productCare.innerHTML = entry.fields.productCare;
+            textDiv.appendChild(productCare);
 
-            // var productDetails = document.createElement('p');
-            // productDetails.innerHTML = entry.fields.productDetails;
-            // textDiv.appendChild(productDetails);
+            var productDetails = document.createElement('p');
+            productDetails.innerHTML = entry.fields.productDetails;
+            textDiv.appendChild(productDetails);
 
             var linkToProduct = document.createElement('a');
             linkToProduct.innerHTML = entry.fields.button;
             linkToProduct.href = 'product.html?id=' + entry.sys.id;
             linkToProduct.innerHTML = ('SEE MORE');
-            div.appendChild(linkToProduct);
+            textDiv.appendChild(linkToProduct);
 
             // var link = document.createElement('button')
             // link.innerHTML = "link to " + entry.fields.name;
@@ -83,6 +84,7 @@ var placeForContent = document.getElementById('place-for-content');
             console.log(entry.fields.productName);
         }  
 
-        placeForContent.appendChild(div);
+        placeForContent.appendChild(imageDiv);
+        placeForContent.appendChild(textDiv);
     });
   });

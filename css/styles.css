@@ -21,7 +21,7 @@ body p {
 }
 
 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: ;
 }
 
 /* Link colour when not hovering*/
@@ -50,13 +50,14 @@ nav {
     top: 0;
     position: sticky;
     z-index: 999;
-    padding: var(--site-padding);
     background-color: var(--pearl-colour);
 }
 
 .nav-menu {
     list-style: none;
     text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-top {
@@ -65,16 +66,22 @@ nav {
     display: flex;
     top: 0;
     align-items: center;
-    border-bottom: var(--black-colour) solid 0.1em;
+    border-bottom: var(--black-colour) solid 0.2em;
+    padding: var(--site-padding);
 }
 
 .nav-bottom {
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 1.8em;
+    border-bottom: var(--black-colour) solid 0.1em;
+    padding: var(--site-padding);
 }
 
 nav ol a {
     text-decoration: none;
     list-style: none;
+    color: var(--black-colour);
 }
 
 nav button {
@@ -86,7 +93,7 @@ nav button {
 }
 
 nav img {
-    height: 3em;
+    height: 2.4em;
 }
 
 .hamburger {
@@ -115,31 +122,6 @@ header h1 {
 /*MAIN*/
 main {
     padding: var(--site-padding);
-}
-
-#details {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    gap: 2em;
-    padding: 1.6em 0em 6em 0;
-    height: 27em;
-}
-
-#details img {
-    height: 30em;
-}
-
-#details p {
-    overflow: scroll;
-    text-overflow: clip;
-    min-height: 20em;
-}
-
-#place-for-content {
-    display: grid;
-    grid-template-columns: 0.6fr 1.4fr;
-    gap: 4em;
-    padding: 1.6em 0em 6em 0;
 }
 
 main h1 {
@@ -186,6 +168,35 @@ main a, button {
     text-decoration: none;
 }
 
+#place-for-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4em;
+    padding: 1.6em 0em 6em 0;
+}
+
+#place-for-content img {
+    max-height: 22em;
+    width: auto;
+}
+
+#details {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 2em;
+    padding: 1.6em 0em 6em 0;
+    height: 27em;
+}
+
+#details img {
+    height: 30em;
+}
+
+#details p {
+    overflow: scroll;
+    text-overflow: clip;
+    min-height: 20em;
+}
 
 
 /*FOOTER*/
