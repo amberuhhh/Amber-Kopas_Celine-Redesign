@@ -40,7 +40,8 @@ var placeForContent = document.getElementById('daily-picks');
         console.log("entry:");
         console.log(entry);
       // if statement checks that this field exists  
-      var daily = document.createElement ('daily');
+      var daily = document.createElement ('div');
+      daily.classList.add("dailycards")
 
           if (entry.fields.productName) {
           // if (entry.fields.productName) {

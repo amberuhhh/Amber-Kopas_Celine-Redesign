@@ -2,6 +2,7 @@
 /*BASE*/
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 :root {
     --site-padding: 0.5em 10em 0.5em 10em;
@@ -17,6 +18,7 @@ body {
 }
 
 p {
+    font-family: "Nanum Myeongjo", serif;
     font-size: 1em;
     margin: 0;
     padding: 0;
@@ -105,7 +107,9 @@ nav {
 }
 
 .nav-bottom {
+    font-weight: 600;
     text-align: center;
+    width: 100%;
     height: 1.8em;
     border-bottom: var(--black-colour) solid 0.1em;
 }
@@ -114,6 +118,7 @@ nav ol a {
     text-decoration: none;
     list-style: none;
     color: var(--black-colour);
+    padding-left: 1.5em;
 }
 
 nav button {
@@ -155,26 +160,26 @@ main {
     padding: var(--site-padding);
 }
 
-main img { 
-    height: 25em;
-    width: auto;
-    align-items: center;
-}
-
-main h4 {
-    display: flex;
-    justify-content: space-between;
-}
-
 #daily-picks, #subsection {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    width: 100%;
     gap: 4em;
 }
 
-#daily-picks img,  #subsection img {
-    max-height: 22em;
-    width: auto;
+.dailycards {
+    display: block;
+    min-height: 10em;
+}
+
+.dailycards img {
+    max-height: auto;
+    width: 100%;
+}
+
+.subheadings {
+    display: flex;
+    justify-content: space-between;    
 }
 
 #details {
@@ -199,20 +204,27 @@ main h4 {
 /*FOOTER*/
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 6em;
-    height: 16em;
-    text-align: center;
+    min-height: 16em;
+    text-align: start;
     padding: var(--site-padding);
     background-color: var(--pearl-colour);
 }
 
+footer ol a {
+    display: block;
+    line-height: 2.4em;
+    list-style: none;
+    text-decoration: none;
+    color: var(--black-colour);
+}
+
 #copyright {
-    padding: 0;
+    padding: var(--site-padding);
     margin: 0;
-    width: 100%;
     color: white;
-    height: 2em;
+    height: 1.6em;
     text-align: center;
     background-color: var(--black-colour);
 }
@@ -223,7 +235,6 @@ footer {
 /*RESPONSIVE*/
 /* Media query for IPad Pros - less tha 1024*/
 @media screen and (max-width: 64em) {
-
     :root {
         --site-padding: 0.5em 5em 0.5em 5em;
     }
@@ -231,11 +242,10 @@ footer {
         display: block;
     }
 
-    header {
-        gap: 3em;
-        margin-right: 6em;
+    footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
     }
-
 }
 
 /* Media query for IPad Minis - less tha 768*/
@@ -244,21 +254,16 @@ footer {
         --site-padding: 0.45em 2.4em 0.45em 2.4em;
     }
 
-    h1, h2, h3, h4, h5 {
-        padding: 0.2em;
-        margin: 0;
-    }
-
-    .nav-menu {
+    .nav-menu, .nav-menu-pages {
         position: fixed;
         left: -120%;
-        top: 3rem;
+        top: 3.4em;
         flex-direction: column;
         background-color: #fff;
-        height: auto;
+        height: 10em;
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition:ease-in 0.3s;
     }
 
     .nav-menu.active {
@@ -270,37 +275,17 @@ footer {
         cursor: pointer;
     }
 
-    header {
-        gap: 2em;
-        margin-right: 4em;
+    #daily-picks, #subsection {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+        width: 100%;
+        gap: 4em;
     }
-    
-    main {
-        display: block;
-        padding: var(--site-padding);
-    }
-
-    main img {
-        max-height: 17em;
+s
+    .dailycards img {
+        height: auto;
     }
 
-    main p {
-        height: 8em;
-    }
-
-    #place-for-content {
-        grid-template-columns: 0.3fr 1.7fr;
-        gap: 3em;
-    }
-
-    #details {
-        display: inline-block;
-        gap: 2em;
-    }
-    
-    #details img {
-        min-height: 26em;
-    }
 }
 
 /* Media query for Phones - less tha 480px*/
@@ -330,42 +315,7 @@ footer {
         padding: 0.375em;
     }
 
-    header {
-        display: block;
-        min-height: 22em;
-        margin: 0;
-    }
-  
-    header img {
-        height: 18em;
-    }
-
-    .header-text {
-        padding: var(--site-padding);
-        width: auto;
-    }
-
-    main {
-        display: block;
-        padding: var(--site-padding);
-    }
-
-    main img {
-        min-height: 16em;
-        width: auto;
-        align-items: center;
-        text-align: center;
-    }
-
-    main p {
-        height: 18em;
-    }
-
-    #place-for-content {
+    footer {
         grid-template-columns: 1fr;
-    }
-
-    #place-for-content div {
-        border-bottom: solid 0.8em #dbba3f;
     }
 }
