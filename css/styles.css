@@ -183,11 +183,7 @@ main {
 }
 
 #details {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    gap: 2em;
-    padding: 1.6em 0em 6em 0;
-    height: 27em;
+    display: flex;
 }
 
 #details img {
