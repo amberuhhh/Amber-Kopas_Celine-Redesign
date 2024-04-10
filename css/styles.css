@@ -140,20 +140,16 @@ nav img {
 
 /*HERO*/
 header {
-    display: grid;
-    gap: 4em;
-    margin-right: 8em;
-}
-
-header img {
-    height: 36em;
-    width: 100%;
-    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: var(--pink-colour);
 }
 
 header h1 {
-    display: flex;
+    padding: 14%;
 }
+
 
 /*MAIN*/
 main {
