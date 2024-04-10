@@ -156,7 +156,7 @@ main {
     padding: var(--site-padding);
 }
 
-#daily-picks, #subsection {
+#daily-picks, #subsection, #more {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     width: 100%;
@@ -188,13 +188,7 @@ main {
     height: 30em;
 }
 
-#product p {
-    overflow: scroll;
-    text-overflow: clip;
-    min-height: 20em;
-}
-
-main a, button {
+/* main a, button {
     min-height: 1em;
     width: 6em;
     padding: 0.8em;
@@ -203,7 +197,7 @@ main a, button {
     border: none;
     text-decoration: none;
 }
-
+ */
 
 
 /*FOOTER*/
