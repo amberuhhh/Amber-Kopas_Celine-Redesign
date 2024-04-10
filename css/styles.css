@@ -178,19 +178,32 @@ main {
     justify-content: space-between;    
 }
 
-#details {
+#product {
+    margin-top: 1em;
     display: flex;
+    gap: 2em;
 }
 
-#details img {
+#product img {
     height: 30em;
 }
 
-#details p {
+#product p {
     overflow: scroll;
     text-overflow: clip;
     min-height: 20em;
 }
+
+main a, button {
+    min-height: 1em;
+    width: 6em;
+    padding: 0.8em;
+    color: white;
+    background-color: var(--pink-colour);
+    border: none;
+    text-decoration: none;
+}
+
 
 
 /*FOOTER*/
