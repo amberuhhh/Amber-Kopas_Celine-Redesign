@@ -216,13 +216,17 @@ main {
 
 #product {
     margin-top: 1em;
-    display: flex;
-    gap: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1em;
 }
 
-#product img {
-    height: 30em;
+#product * {
+    width: 100%;
+    height: auto;
 }
+
+
 
 
 #cart {
@@ -339,6 +343,11 @@ s
     .dailycards img {
         height: auto;
     }
+
+    #product {
+        grid-template-columns: 1fr ;
+    }
+
 
 }
 
