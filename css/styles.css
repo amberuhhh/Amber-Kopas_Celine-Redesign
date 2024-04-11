@@ -344,7 +344,7 @@ s
         height: auto;
     }
 
-    #product {
+    #product, #cart {
         grid-template-columns: 1fr ;
     }
 
