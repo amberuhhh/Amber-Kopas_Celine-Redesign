@@ -214,14 +214,34 @@ main {
     justify-content: space-between;    
 }
 
-#product {
+#product-section-wrapper {
     margin-top: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     gap: 1em;
 }
 
-#product * {
+#textdiv aside {
+    margin-top: 2em;
+    line-height: 1.4em;
+    display: block;
+}
+
+#textdiv aside * {
+    height: auto;
+    text-overflow: hidden;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+/* #textdiv aside *:hover {
+    height: auto;
+    text-overflow: visible;
+    overflow: visible;
+    margin-top: 1em;
+} */
+
+#image img {
     width: 100%;
     height: auto;
 }
@@ -339,7 +359,7 @@ footer ol a {
         width: 100%;
         gap: 4em;
     }
-s
+
     .dailycards img {
         height: auto;
     }
@@ -347,7 +367,6 @@ s
     #product, #cart {
         grid-template-columns: 1fr ;
     }
-    /* why is thisnot updating??? */
 
 }
 
