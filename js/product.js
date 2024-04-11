@@ -40,7 +40,6 @@ var placeProduct = document.getElementById('image');
     console.log(entry);
       // if statement checks that this field exists  
       var imageDiv = document.createElement ('aside');
-
           if (entry.fields.productName) {
             var productMainImage = document.createElement('img');
             productMainImage.src = entry.fields.productMainImage.fields.file.url;
@@ -50,7 +49,6 @@ var placeProduct = document.getElementById('image');
           }
         placeProduct.appendChild(imageDiv);
       });
-
 
 
   var placeProductPara = document.getElementById('textdiv');

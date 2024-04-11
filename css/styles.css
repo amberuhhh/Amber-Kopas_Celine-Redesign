@@ -221,6 +221,11 @@ main {
     gap: 1em;
 }
 
+#textdiv * * {
+    text-align: start;
+    display: block;
+}
+
 #textdiv aside {
     margin-top: 2em;
     line-height: 1.4em;
