@@ -364,7 +364,7 @@ footer ol a {
         height: auto;
     }
 
-    #product, #cart {
+    #product-section-wrapper, #cart {
         grid-template-columns: 1fr ;
     }
 
