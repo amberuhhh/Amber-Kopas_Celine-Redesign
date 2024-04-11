@@ -31,7 +31,7 @@ var client = contentful.createClient({
   });
 
 
-//DAILY PICKS
+// DAILY PICKS
   var placeForContent = document.getElementById('daily-picks');
   console.log("Daily Picks!!!");
 
@@ -40,11 +40,13 @@ var client = contentful.createClient({
     console.log(entries);
 
     entries.items.forEach(function (entry) {
-      console.log("Daily Category");
+      console.log("Daily Category:");
+      console.log(entry);
 
         //if statement checks that this field exists  
         var dailyPicks = document.createElement ('div');
         dailyPicks.classList.add("dailycards")
+
           // how to show just shirts - category as property of product
         if (entry.fields.categories = "daily") {
 
@@ -68,7 +70,6 @@ var client = contentful.createClient({
         linkToProduct.innerHTML = entry.fields.button;
         linkToProduct.href = 'product.html?id=' + entry.sys.id;
         dailyPicks.appendChild(linkToProduct);
-        console.log("Is this working???");
         console.log(entry.fields.productName);
         } 
         placeForContent.appendChild(dailyPicks);
@@ -88,36 +89,36 @@ var client = contentful.createClient({
     entries.items.forEach(function (entry) {
       console.log("Women category");
 
-        //if statement checks that this field exists  
-        var women = document.createElement ('div');
-        women.classList.add("dailycards")
+      //if statement checks that this field exists  
+        var womenPicks = document.createElement ('div');
+        womenPicks.classList.add("dailycards")
           // how to show just shirts - category as property of product
-        if (entry.fields.categories === "women") {
+        if (entry.fields.categories = "women") {
 
         var productMainImage = document.createElement('img');
         productMainImage.src = entry.fields.productMainImage.fields.file.url;
-        women.appendChild(productMainImage);
+        womenPicks.appendChild(productMainImage);
 
         var productName = document.createElement('h4');
         productName.innerHTML = entry.fields.productName;
-        women.appendChild(productName);
+        womenPicks.appendChild(productName);
 
         var productBasicInfo = document.createElement('p');
         productBasicInfo.innerHTML = entry.fields.productBasicInfo;
-        women.appendChild(productBasicInfo);
+        womenPicks.appendChild(productBasicInfo);
 
         var productPrice = document.createElement('h6');
         productPrice.innerHTML = entry.fields.productPrice;
-        women.appendChild(productPrice);
+        womenPicks.appendChild(productPrice);
 
         var linkToProduct = document.createElement('a');
         linkToProduct.innerHTML = entry.fields.button;
         linkToProduct.href = 'product.html?id=' + entry.sys.id;
-        women.appendChild(linkToProduct);
+        womenPicks.appendChild(linkToProduct);
 
         console.log(entry.fields.productName);
         } 
-        placeForContentWomen.appendChild(women);
+        placeForContentWomen.appendChild(womenPicks);
     });
   });
 
@@ -137,7 +138,7 @@ var client = contentful.createClient({
         var men = document.createElement ('div');
         men.classList.add("dailycards")
           // how to show just shirts - category as property of product
-        if (entry.fields.categories === "men") {
+        if (entry.fields.categories = "men") {
 
         var productMainImage = document.createElement('img');
         productMainImage.src = entry.fields.productMainImage.fields.file.url;
@@ -171,10 +172,14 @@ var client = contentful.createClient({
   var placeForContentFrag = document.getElementById('fragrances');
   console.log("Fragrances");
 
+  // gets all the entries as a json
   client.getEntries({content_type: 'celineRedesign', limit:1,}).then(function (entries) {
+    // client.getEntries({content_type: 'celineRedesign', limit:1,}).then(function (entries) {
+
     console.log("entries:");
     console.log(entries);
 
+  // loops through the json to look at one entry at a time
     entries.items.forEach(function (entry) {
       console.log("Fragrances category");
 
@@ -182,7 +187,7 @@ var client = contentful.createClient({
         var frag = document.createElement ('div');
         frag.classList.add("dailycards")
           // how to show just shirts - category as property of product
-        if (entry.fields.categories == "Fragrances") {
+        if (entry.fields.categories = "fragrances") {
 
         var productMainImage = document.createElement('img');
         productMainImage.src = entry.fields.productMainImage.fields.file.url;
@@ -210,6 +215,57 @@ var client = contentful.createClient({
         placeForContentFrag.appendChild(frag);
     });
   });
+
+
+  // // ALL RENAMED FRAG FRAGRANCES
+  // var placeForContentFrag = document.getElementById('fragrances');
+  // console.log("Fragrances");
+
+  // // gets all the entries as a json
+  // client.getEntries({content_type: 'celineRedesign', limit:1,}).then(function (entriesFrag) {
+  //   console.log("entriesFrag:");
+  //   console.log(entriesFrag);
+
+  // // loops through the json to look at one entry at a time
+  //   entriesFrag.items.forEach(function (entryFrag) {
+  //     console.log("Fragrances category");
+
+  //       //if statement checks that this field exists  
+  //       var frag = document.createElement ('div');
+  //       frag.classList.add("dailycards")
+  //         // how to show just shirts - category as property of product
+  //       if (entryFrag.fields.categories == "fragrances") {
+
+  //       var productMainImageFrag = document.createElement('img');
+  //       productMainImageFrag.src = entryFrag.fields.productMainImage.fields.file.url;
+  //       frag.appendChild(productMainImageFrag);
+
+  //       var productNameFrag = document.createElement('h4');
+  //       productNameFrag.innerHTML = entryFrag.fields.productName;
+  //       frag.appendChild(productNameFrag);
+
+  //       var productBasicInfoFrag = document.createElement('p');
+  //       productBasicInfoFrag.innerHTML = entryFrag.fields.productBasicInfo;
+  //       frag.appendChild(productBasicInfoFrag);
+
+  //       var productPriceFrag = document.createElement('h6');
+  //       productPriceFrag.innerHTML = entryFrag.fields.productPrice;
+  //       frag.appendChild(productPriceFrag);
+
+  //       var linkToProductFrag = document.createElement('a');
+  //       linkToProductFrag.innerHTML = entryFrag.fields.button;
+  //       linkToProductFrag.href = 'product.html?id=' + entryFrag.sys.id;
+  //       frag.appendChild(linkToProductFrag);
+
+  //       console.log(entryFrag.fields.productName);
+  //       } 
+  //       placeForContentFrag.appendChild(frag);
+  //   });
+  // });
+
+
+
+
 
 
 
