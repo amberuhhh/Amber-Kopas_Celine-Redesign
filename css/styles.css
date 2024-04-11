@@ -347,7 +347,7 @@ s
     #product, #cart {
         grid-template-columns: 1fr ;
     }
-
+    /* why is thisnot updating??? */
 
 }
 
