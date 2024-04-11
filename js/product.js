@@ -65,23 +65,61 @@ var placeProduct = document.getElementById('product');
             var productDetails = document.createElement('p');
             productDetails.innerHTML = entry.fields.productDetails;
             products.appendChild(productDetails);
-        
-            // var linkToProduct = document.createElement('a');
-            // linkToProduct.innerHTML = entry.fields.button;
-            // linkToProduct.href = 'product.html?id=' + entry.sys.id;
-            // products.appendChild(linkToProduct);
 
-            // var link = document.createElement('button')
-            // link.innerHTML = "link to " + entry.fields.name;
-            // link.href= entry.fields.link;
-            // placeForContent.appendChild(link);
-
-            // do whatever with the info in the field
             console.log(entry.fields.productName);
         }  
         placeProduct.appendChild(imageDiv);
         placeProduct.appendChild(products);
       });
+
+
+
+
+
+// MORE DAILY PICKS
+var placeForContent = document.getElementById('more');
+console.log("More Daily Picks!!!");
+
+client.getEntries({content_type: 'celineRedesign', limit:3,}).then(function (entries) {
+  console.log("entries:");
+  console.log(entries);
+
+  entries.items.forEach(function (entry) {
+    console.log("Daily Category:");
+    console.log(entry);
+
+      //if statement checks that this field exists  
+      var dailyPicks = document.createElement ('div');
+      dailyPicks.classList.add("dailycards")
+
+        // how to show just shirts - category as property of product
+      if (entry.fields.categories = "daily") {
+
+      var productMainImage = document.createElement('img');
+      productMainImage.src = entry.fields.productMainImage.fields.file.url;
+      dailyPicks.appendChild(productMainImage);
+
+      var productName = document.createElement('h4');
+      productName.innerHTML = entry.fields.productName;
+      dailyPicks.appendChild(productName);
+
+      var productBasicInfo = document.createElement('p');
+      productBasicInfo.innerHTML = entry.fields.productBasicInfo;
+      dailyPicks.appendChild(productBasicInfo);
+
+      var productPrice = document.createElement('h6');
+      productPrice.innerHTML = entry.fields.productPrice;
+      dailyPicks.appendChild(productPrice);
+
+      var linkToProduct = document.createElement('a');
+      linkToProduct.innerHTML = entry.fields.button;
+      linkToProduct.href = 'product.html?id=' + entry.sys.id;
+      dailyPicks.appendChild(linkToProduct);
+      console.log(entry.fields.productName);
+      } 
+      placeForContent.appendChild(dailyPicks);
+  });
+});
 
 
 

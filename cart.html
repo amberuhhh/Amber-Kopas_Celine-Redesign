@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celine | Home</title>
+    <title>Celine | Cart</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
     <script src="https://kit.fontawesome.com/eda861a150.js" crossorigin="anonymous"></script>
@@ -33,28 +33,28 @@
     </nav>
 
     <header>
-        <h1>Celine</h1>
     </header>
 
     <main>  
-        <h2>Daily Picks</h2>
-        <section id="daily-picks">
+        <button type="button" value="Go back!" onclick="history.back()">&#8249; Back</button> 
+        <div  id="cart">
+            <section>
 
-        </section>
-
-        <div id=subsection class="subheadings">
-            <div id="women">            
-                <h4>Women</h4>
+            </section>
+            <div>
+                <div id="cost">
+                    <h5>This is money</h5>
+                    <h5>This is more Money</h5>
+                    <a><button class="colour-box-black">PROCEED TO CHECKOUT</button></a>
+                </div>
+                    <form id="cart-wrapper">
+                        <h5>Email</h5>
+                        <input type="email">
+                        <h5>Password</h5>
+                        <input type="password">
+                        <a><button class="signup-button">SIGN UP</button></a>
+                    </form>
             </div>
-
-            <div id="men">
-                <h4>Men</h4>
-            </div>
-
-            <div id="fragrances">
-                <h4>Fragrances</h4>
-            </div>
-
         </div>
     </main>
 <footer>
@@ -85,5 +85,5 @@
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-<script src="./js/script.js"></script>
+<script src="./js/product.js"></script>
 </html>
