@@ -62,9 +62,12 @@ h6 {
 
 button {
     font-family: "Nanum Myeongjo", serif;
-    background-color: var(--pink-colour);
+    background-color: var(--black-colour);
+    color: white;
     border: none;
     padding: 1em;
+    min-height: 3em;
+    min-width: 14em;
 }
 
 button:hover {
@@ -171,6 +174,7 @@ nav img {
 
 .hamburger {
     display: none;
+    min-width: 0em;
 }
 
 
@@ -214,8 +218,8 @@ main {
     justify-content: space-between;    
 }
 
-#product-section-wrapper {
-    margin-top: 1em;
+#product-section-wrapper, #cost-wrapper {
+    margin-bottom: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     gap: 1em;
@@ -224,6 +228,15 @@ main {
 #textdiv * * {
     text-align: start;
     display: block;
+}
+
+#textdiv button {
+    width: 100%;
+    text-align: center;
+}
+
+#textdiv h6 {
+    text-align: end;
 }
 
 #textdiv aside {
@@ -239,24 +252,35 @@ main {
     margin-top: 1em;
 }
 
-/* #textdiv aside *:hover {
-    height: auto;
-    text-overflow: visible;
-    overflow: visible;
-    margin-top: 1em;
-} */
-
-#image img {
+#image img, #cost button, #cart-wrapper button {
     width: 100%;
     height: auto;
 }
 
 
-
-
 #cart {
     display: grid;
-    grid-template-columns: 1.4fr 0.6fr;
+    grid-template-columns: 1.3fr 0.7fr;
+}
+
+#cart-item-wrapper {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 2em;
+    width: 100%;
+}
+
+#cart-item-wrapper img {
+    max-width: 16em;
+    height: 100%;
+}
+
+#cart-wrapper {
+    margin-top: 8em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
 }
 
 input {
@@ -264,12 +288,6 @@ input {
     height: 2.6em;
     background-color: var(--pearl-colour);
     border: none;
-}
-
-#cart-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
 }
 
 /* main a, button {

@@ -79,6 +79,10 @@ var placeProduct = document.getElementById('image');
         productDetails.innerHTML = entry.fields.productDetails;
         paraDiv.appendChild(productDetails);
 
+        var addToCart = document.createElement('button');
+        addToCart.innerHTML = entry.fields.addToCart;
+        paraDiv.appendChild(addToCart);  
+
         console.log(entry.fields.productName);
       }
     placeProducthead.appendChild(headings);
