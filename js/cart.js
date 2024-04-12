@@ -18,6 +18,28 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
+//BOTTOM HAMBURGER MENU
+const dropDown = document.querySelector(".dropdown");
+const navMenuPages = document.querySelector(".nav-menu-pages");
+
+dropDown.addEventListener("click", mobileMenu2);
+
+function mobileMenu2() {
+  dropDown.classList.toggle("active");
+    navMenuPages.classList.toggle("active");
+}
+
+// const navLink = document.querySelectorAll(".nav-link");
+// navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu2() {
+    dropDown.classList.remove("active");
+    navMenuPages.classList.remove("active");
+}
+
+
+
+
 
 
 
@@ -54,7 +76,7 @@ client.getEntries({content_type: 'celineRedesign', limit:3,}).then(function (ent
       productMainImage.src = entry.fields.productMainImage.fields.file.url;
       dailyImagePicks.appendChild(productMainImage);
 
-      var productName = document.createElement('h4');
+      var productName = document.createElement('h5');
       productName.innerHTML = entry.fields.productName;
       dailyPicks.appendChild(productName);
 

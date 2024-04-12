@@ -60,6 +60,10 @@ h6 {
     padding: 0;
 }
 
+hr {
+    margin: 2em 0em 2em 0em;
+}
+
 button {
     font-family: "Nanum Myeongjo", serif;
     background-color: var(--black-colour);
@@ -131,8 +135,6 @@ nav {
 .nav-menu, .nav-menu-pages {
     list-style: none;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-menu-pages a {
@@ -151,7 +153,7 @@ nav {
 
 .nav-bottom {
     font-weight: 600;
-    height: max-content;
+    height: auto;
     border-bottom: var(--black-colour) solid 0.1em;
     text-align: center;
     display: grid;
@@ -203,6 +205,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     width: 100%;
     gap: 4em;
+    margin-bottom: 2em;
 }
 
 .dailycards {
@@ -218,6 +221,7 @@ main {
 .subheadings {
     display: flex;
     justify-content: space-between;    
+    text-align: center;
 }
 
 #product-section-wrapper, #cost-wrapper {
@@ -259,10 +263,10 @@ main {
     height: auto;
 }
 
-
 #cart {
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
+    gap: 2em;
 }
 
 #cart-item-wrapper {
@@ -279,7 +283,7 @@ main {
 }
 
 #cart-wrapper {
-    margin-top: 8em;
+    /* margin-top: 8em; */
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
@@ -292,16 +296,12 @@ input {
     border: none;
 }
 
-/* main a, button {
-    min-height: 1em;
-    width: 6em;
-    padding: 0.8em;
-    color: white;
-    background-color: var(--pink-colour);
-    border: none;
-    text-decoration: none;
+#more {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
 }
- */
+
 
 
 /*FOOTER*/
@@ -366,6 +366,7 @@ footer ol a {
         grid-template-columns: 1fr;
         height: max-content;
         width: auto;
+        line-height: 2.2em;
     }
 
     .nav-menu.active {
@@ -374,6 +375,7 @@ footer ol a {
     }
 
     .nav-menu-pages.active {
+        padding: 0;
         top: 3.6em;
         position: initial;
     }
@@ -397,6 +399,8 @@ footer ol a {
     #product-section-wrapper, #cart {
         grid-template-columns: 1fr ;
     }
+
+
 
 }
 
@@ -425,6 +429,20 @@ footer ol a {
 
     nav {
         padding: 0.375em;
+    }
+
+    #cart-item-wrapper {
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 0.6fr 1.4fr;
+        gap: 1em;
+        width: 100%;
+    }
+    
+    #cart-item-wrapper img {
+        object-fit: cover;
+        max-width: 6em;
+        height: 100%;
     }
 
     footer {
