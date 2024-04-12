@@ -9,14 +9,34 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
+// const navLink = document.querySelectorAll(".nav-link");
+// navLink.forEach(n => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+
+//BOTTOM HAMBURGER MENU
+const dropDown = document.querySelector(".dropdown");
+const navMenuPages = document.querySelector(".nav-menu-pages");
+
+dropDown.addEventListener("click", mobileMenu2);
+
+function mobileMenu2() {
+  dropDown.classList.toggle("active");
+    navMenuPages.classList.toggle("active");
+}
+
+// const navLink = document.querySelectorAll(".nav-link");
+// navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu2() {
+    dropDown.classList.remove("active");
+    navMenuPages.classList.remove("active");
+}
+
 
 
 
