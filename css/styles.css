@@ -61,7 +61,7 @@ h6 {
 }
 
 hr {
-    margin: 2em 0em 2em 0em;
+    margin: 3em 0em 3em 0em;
 }
 
 button {
@@ -202,7 +202,7 @@ main {
     padding: var(--site-padding);
 }
 
-#daily-picks, #subsection, #more {
+#daily-picks, #subsection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     width: 100%;
@@ -300,8 +300,9 @@ input {
 
 #more {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
+    margin-bottom: 2em;
 }
 
 
@@ -449,6 +450,10 @@ footer ol a {
 
     .nav-menu, .nav-menu-pages {
         top: 2.86em;
+    }
+
+    #more {
+        grid-template-columns: 1fr;
     }
 
     #cart-item-wrapper {
