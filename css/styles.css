@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-    font-weight: bold;
+    color: rgb(104, 104, 104);
 }
 
 .signup-button {
@@ -153,19 +153,15 @@ nav {
     border-bottom: var(--black-colour) solid 0.1em;
 }
 
+#nav-bottom-burger {
+    display: none;
+}
+
 nav ol a {
     text-decoration: none;
     list-style: none;
     color: var(--black-colour);
     padding-left: 1.5em;
-}
-
-nav button {
-    padding: 10px;
-    margin: 0;
-    border: none;
-    color: black;
-    background-color: transparent;
 }
 
 nav img {
@@ -175,6 +171,8 @@ nav img {
 .hamburger {
     display: none;
     min-width: 0em;
+    color: black;
+    background-color: transparent;
 }
 
 
@@ -355,20 +353,28 @@ footer ol a {
         --site-padding: 0.45em 2.4em 0.45em 2.4em;
     }
 
-    .nav-menu, .nav-menu-pages {
-        position: fixed;
-        left: -120%;
-        top: 3.4em;
-        flex-direction: column;
-        background-color: #fff;
-        height: 10em;
-        width: 100%;
-        text-align: center;
-        transition:ease-in 0.3s;
+    .nav-bottom {
+        display: none;
     }
 
-    .nav-menu.active {
-        left: 0;
+    #nav-bottom-burger {
+        display: block
+    }
+
+    .nav-menu, .nav-menu-pages, #nav-bottom-burger {
+        z-index: -1;
+        position: fixed;
+        right: -120%;
+        top: 3.7em;
+        flex-direction: column;
+        background-color: #fff;
+        height: 100%;
+        width: auto;
+        text-align: start;
+    }
+
+    .nav-menu.active, .nav-menu-pages:active, .nav-bottom:active {
+        right: 0;
     }
 
     .hamburger {
