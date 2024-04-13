@@ -42,7 +42,6 @@ function closeMenu2() {
 
 
 
-
 //GRAB FROM CONTENTFUL
 var textInURL = window.location.search;
 var parametersInURL = new URLSearchParams(textInURL);
@@ -111,6 +110,27 @@ var placeProduct = document.getElementById('image');
     placeProducthead.appendChild(headings);
     placeProductPara.appendChild(paraDiv);
   });
+
+
+
+
+// INCREMENT COUNTER
+  function incrementCounter() {
+    var currentCount = document.getElementById("counter").innerHTML;
+    currentCount++;
+    document.getElementById("counter").innerHTML = currentCount;
+  }
+  function decrementCounter() {
+    var currentCount = document.getElementById("counter").innerHTML;
+    if (currentCount > 0) {
+      currentCount--;
+      document.getElementById("counter").innerHTML = currentCount;
+    }
+  }
+
+
+
+
 
 
 

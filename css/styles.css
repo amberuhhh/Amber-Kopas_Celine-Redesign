@@ -220,10 +220,10 @@ main {
     width: 100%;
 }
 
-.subheadings {
-    display: flex;
-    justify-content: space-between;    
-    text-align: center;
+.dailycards a {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
 }
 
 #product-section-wrapper, #cost-wrapper {

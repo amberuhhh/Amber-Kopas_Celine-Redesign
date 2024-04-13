@@ -143,6 +143,7 @@ var client = contentful.createClient({
   });
 
 
+
   // MEN
   var placeForContentMen = document.getElementById('men');
   console.log("Men");
@@ -186,6 +187,7 @@ var client = contentful.createClient({
         placeForContentMen.appendChild(men);
     });
   });
+
 
 
   // FRAGRANCES
@@ -236,6 +238,9 @@ var client = contentful.createClient({
     });
   });
 
+
+
+  
 
   // // ALL RENAMED FRAG FRAGRANCES
   // var placeForContentFrag = document.getElementById('fragrances');

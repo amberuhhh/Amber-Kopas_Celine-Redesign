@@ -74,6 +74,7 @@ client.getEntries({content_type: 'celineRedesign', limit:3,}).then(function (ent
 
       var productMainImage = document.createElement('img');
       productMainImage.src = entry.fields.productMainImage.fields.file.url;
+      productMainImage.href = 'product.html?id=' + entry.sys.id;
       dailyImagePicks.appendChild(productMainImage);
 
       var productName = document.createElement('h5');
