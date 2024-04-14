@@ -91,6 +91,7 @@ client.getEntries({content_type: 'celineRedesign', limit:3,}).then(function (ent
 
       var linkToProduct = document.createElement('a');
       linkToProduct.innerHTML = entry.fields.button;
+      linkToProduct.innerHTML = "SEE MORE";
       linkToProduct.href = 'product.html?id=' + entry.sys.id;
       dailyPicks.appendChild(linkToProduct);
 

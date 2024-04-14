@@ -88,6 +88,7 @@ var client = contentful.createClient({
 
         var linkToProduct = document.createElement('a');
         linkToProduct.innerHTML = entry.fields.button;
+        linkToProduct.innerHTML = "SEE MORE";
         linkToProduct.href = 'product.html?id=' + entry.sys.id;
         dailyPicks.appendChild(linkToProduct);
         console.log(entry.fields.productName);
@@ -133,6 +134,7 @@ var client = contentful.createClient({
 
         var linkToProduct = document.createElement('a');
         linkToProduct.innerHTML = entry.fields.button;
+        linkToProduct.innerHTML = "SEE MORE";
         linkToProduct.href = 'product.html?id=' + entry.sys.id;
         womenPicks.appendChild(linkToProduct);
 
@@ -179,6 +181,7 @@ var client = contentful.createClient({
 
         var linkToProduct = document.createElement('a');
         linkToProduct.innerHTML = entry.fields.button;
+        linkToProduct.innerHTML = "SEE MORE";
         linkToProduct.href = 'product.html?id=' + entry.sys.id;
         men.appendChild(linkToProduct);
 
@@ -229,6 +232,7 @@ var client = contentful.createClient({
 
         var linkToProduct = document.createElement('a');
         linkToProduct.innerHTML = entry.fields.button;
+        linkToProduct.innerHTML = "SEE MORE";
         linkToProduct.href = 'product.html?id=' + entry.sys.id;
         frag.appendChild(linkToProduct);
 
